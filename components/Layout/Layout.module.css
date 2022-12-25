@@ -2,6 +2,6 @@
     padding: 0;
     display: grid;
     grid-template-areas: "sidebar main";
-    grid-template-columns: minmax(0,1fr) minmax(0,3fr);
+    grid-template-columns: minmax(0,1fr) minmax(0,5fr);
 }
 
