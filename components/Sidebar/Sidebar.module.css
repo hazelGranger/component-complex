@@ -1,0 +1,23 @@
+.sidebar ul{
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 30px;
+    background-color: rgb(59 130 246 / 50%);
+    transition: background-color ease-in-out .3s;
+}
+
+.sidebar ul li:hover {
+    background-color: rgb(59 130 246 / 70%);
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+}
+
+.sidebarText {
+    margin-left: .5rem;
+}
