@@ -1,7 +1,10 @@
 .sidebar ul{
     list-style: none;
     padding-inline-start: 0;
-    min-height: 100vh;
+}
+
+.sidebar > ul {
+    min-height: 100vh; 
     background-color: rgb(59 130 246 / 50%);
 }
 
@@ -10,7 +13,7 @@
     transition: background-color ease-in-out .3s;
 }
 
-.sidebar ul li:hover {
+.sidebar > ul li:hover {
     background-color: rgb(59 130 246 / 70%);
 }
 
