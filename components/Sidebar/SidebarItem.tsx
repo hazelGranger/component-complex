@@ -1,6 +1,7 @@
-import { ReactNode } from 'react'
+import React, { ReactNode, useState } from 'react'
 import SidebarIcon from './SidebarIcon'
 import SidebarText from './SidebarText'
+import styles from './Sidebar.module.css'
 
 type SidebarItemProps = {
   children?: ReactNode
@@ -17,13 +18,21 @@ const SidebarItem = ({
   isCollapsible = false,
   link,
 }: SidebarItemProps) => {
+  const [isCollapsed, setIsCollapsed] = useState(true)
+
+  const handleClick = () => {
+    setIsCollapsed((isCollapsed) => !isCollapsed)
+  }
+
   return (
-    <li>
+    <li className={styles.sidebarItem}>
       {isCollapsible ? (
         <>
-          <SidebarIcon icon={icon} />
-          <SidebarText text={text} />
-          {children}
+          <a onClick={handleClick}>
+            <SidebarIcon icon={icon} />
+            <SidebarText text={text} />
+          </a>
+          {!isCollapsed && children}
         </>
       ) : (
         <a href={link}>

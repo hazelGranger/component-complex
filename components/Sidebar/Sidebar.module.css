@@ -9,7 +9,6 @@
 }
 
 .sidebar ul li {
-    padding: 15px 30px;
     transition: background-color ease-in-out .3s;
 }
 
@@ -20,8 +19,14 @@
 .sidebar ul li a {
     display: flex;
     align-items: center;
+    padding: 15px 30px;
+    flex-wrap: wrap;
 }
 
 .sidebarText {
     margin-left: .5rem;
+}
+
+.sidebarItem {
+    cursor: pointer;
 }
