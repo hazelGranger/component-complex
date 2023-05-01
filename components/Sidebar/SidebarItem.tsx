@@ -5,7 +5,7 @@ import styles from './Sidebar.module.css'
 
 type SidebarItemProps = {
   children?: ReactNode
-  icon: string
+  icon?: string
   text: string
   isCollapsible?: boolean
   link?: string
@@ -28,15 +28,15 @@ const SidebarItem = ({
     <li className={styles.sidebarItem}>
       {isCollapsible ? (
         <>
-          <a onClick={handleClick}>
-            <SidebarIcon icon={icon} />
+          <a onClick={handleClick} >
+          { icon && <SidebarIcon icon={icon} />}
             <SidebarText text={text} />
           </a>
           {!isCollapsed && children}
         </>
       ) : (
         <a href={link}>
-          <SidebarIcon icon={icon} />
+           { icon && <SidebarIcon icon={icon} />}
           <SidebarText text={text} />
         </a>
       )}
