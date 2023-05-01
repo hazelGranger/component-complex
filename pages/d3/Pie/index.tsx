@@ -1,7 +1,11 @@
-const Pie = () => {
+import Layout from "../../../components/Layout/Layout";
+
+const PiePage = () => {
     return(
-        <div>Pie</div>
+        <Layout>
+            <Pie></Pie>
+        </Layout>
     )
 }
 
-export default Pie;
+export default PiePage;
