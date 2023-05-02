@@ -7,7 +7,7 @@ const Sidebar = () => {
     <aside>
       <nav className={styles.sidebar}>
         <SidebarList level={0}>
-          <SidebarItem link="./" icon="home" text="Home" />
+          <SidebarItem link="/" icon="home" text="Home" />
           <SidebarItem icon="equalizer" text="D3" isCollapsible={true}>
             <SidebarList level={1}>
               <SidebarItem
@@ -16,13 +16,13 @@ const Sidebar = () => {
                 isCollapsible={true}
               >
                 <SidebarList level={2}>
-                  <SidebarItem link="./d3/pie/simple-pie" text="Simple Pie Chart" />
+                  <SidebarItem link="/d3/pie/simple-pie" text="Simple Pie Chart" />
                 </SidebarList>
               </SidebarItem>
             </SidebarList>
           </SidebarItem>
-          <SidebarItem link="./google-map" icon="map" text="Google Map" />
-          <SidebarItem link="./three-js" icon="view_in_ar" text="Three.js" />
+          <SidebarItem link="/google-map" icon="map" text="Google Map" />
+          <SidebarItem link="/three-js" icon="view_in_ar" text="Three.js" />
         </SidebarList>
       </nav>
     </aside>
