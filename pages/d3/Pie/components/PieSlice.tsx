@@ -1,20 +1,24 @@
 type PieSliceProps = {
     d: any;
     textTransform: string;
-    name: string;
+    label: string;
+    value: number | string;
     color: string;
 }
 
-const PieSlice = ({d, textTransform, name, color} : PieSliceProps) =>
-{
+export default function PieSlice({ d, textTransform, label, value, color }: PieSliceProps) {
     return (
-        <g>
-            <path fill={color} d={d}></path>
-            <text fill="white" transform={textTransform}>
-                <tspan x="0" fontSize="26" fontWeight="bold">{name}</tspan>
-            </text>
-        </g>
-    )
-}
-
-export default PieSlice;
+      <g>
+        <path fill={color} d={d}></path>
+        <text fill="white" transform={textTransform}>
+          <tspan x="0" fontSize="26" fontWeight="bold">
+            {label}
+          </tspan>
+          <tspan x="0" fontSize="26" fontWeight="bold" dy="30">
+            {value}
+          </tspan>
+        </text>
+      </g>
+    );
+  }
+  

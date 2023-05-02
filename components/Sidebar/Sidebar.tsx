@@ -11,13 +11,12 @@ const Sidebar = () => {
           <SidebarItem icon="equalizer" text="D3" isCollapsible={true}>
             <SidebarList level={1}>
               <SidebarItem
-                link="./d3/Pie"
                 icon="pie_chart"
                 text="Pie"
                 isCollapsible={true}
               >
                 <SidebarList level={2}>
-                  <SidebarItem link="./d3/Pie" text="simple pie chart" />
+                  <SidebarItem link="./d3/pie/simple-pie" text="Simple Pie Chart" />
                 </SidebarList>
               </SidebarItem>
             </SidebarList>
