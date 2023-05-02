@@ -1,5 +1,5 @@
 import Layout from "../../../../components/Layout/Layout";
-import Pie from "../components/Pie";
+import Pie from "../../../../components/Pie/Pie";
 
 const PiePage = () => {
   const data = [
