@@ -1,22 +1,22 @@
-import { pie, arc, PieArcDatum } from "d3";
-import PieContainer from "./PieContainer";
-import PieSlice from "./PieSlice";
-import { useMemo } from "react";
+import { pie, arc, PieArcDatum } from 'd3'
+import PieContainer from './PieContainer'
+import PieSlice from './PieSlice'
+import { useMemo } from 'react'
 
 interface PieDataItem {
-  [key: string]: any;
+  [key: string]: any
 }
 
 type PieChartProps = {
-  pieData: PieDataItem[];
-  valueAttribute: keyof PieDataItem;
-  textAttribute: keyof PieDataItem;
-  width: string;
-  innerRadius: number;
-  outerRadius: number;
-  cornerRadius: number;
-  padRadius: number;
-};
+  pieData: PieDataItem[]
+  valueAttribute: keyof PieDataItem
+  textAttribute: keyof PieDataItem
+  width: string
+  innerRadius: number
+  outerRadius: number
+  cornerRadius: number
+  padRadius: number
+}
 
 export default function PieChart({
   pieData,
@@ -31,8 +31,8 @@ export default function PieChart({
   const pieArcData = useMemo(
     () =>
       pie<PieDataItem>().value((d: PieDataItem) => d[valueAttribute])(pieData),
-    [pieData, valueAttribute]
-  );
+    [pieData, valueAttribute],
+  )
 
   const arcPie = useMemo(
     () =>
@@ -42,14 +42,14 @@ export default function PieChart({
         .padRadius(padRadius)
         .padAngle(2 / padRadius)
         .cornerRadius(cornerRadius),
-    [innerRadius, outerRadius, padRadius, cornerRadius]
-  );
+    [innerRadius, outerRadius, padRadius, cornerRadius],
+  )
 
-  const colors = ["#63cfb2", "#b5d373", "#f6c451", "#e1533d", "#a477bb"];
+  const colors = ['#63cfb2', '#b5d373', '#f6c451', '#e1533d', '#a477bb']
 
   return (
     <PieContainer
-      viewBox={"-320 -320 640 640"}
+      viewBox={'-320 -320 640 640'}
       style={{
         maxWidth: width,
       }}
@@ -59,15 +59,15 @@ export default function PieChart({
       {pieArcData.map((d, i) => (
         <PieSlice
           key={i}
-          d={arcPie(d)}
+          d={arcPie(d) ?? ''}
           textTransform={`translate(${arcPie
             .centroid(d)
-            .join(",")}) rotate(${0})`}
+            .join(',')}) rotate(${0})`}
           label={d.data[textAttribute]}
           value={d.value}
           color={colors[i % colors.length]}
         />
       ))}
     </PieContainer>
-  );
+  )
 }
