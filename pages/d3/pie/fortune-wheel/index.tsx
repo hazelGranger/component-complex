@@ -1,5 +1,6 @@
 import Pie from '../../../../components/Pie/SimplePie'
-const PiePage = () => {
+
+const FortuneWheelPage = () => {
   const data = [
     { label: 'A', value: 3 },
     { label: 'B', value: 2 },
@@ -20,4 +21,4 @@ const PiePage = () => {
   )
 }
 
-export default PiePage
+export default FortuneWheelPage

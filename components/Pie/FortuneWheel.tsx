@@ -4,7 +4,7 @@ import PieSlice from './PieSlice'
 import { useMemo } from 'react'
 import { PieChartProps, PieDataItem } from '../types/pie'
 
-export default function SimplePieChart({
+export default function FortuneWheel({
   pieData,
   valueAttribute,
   textAttribute,

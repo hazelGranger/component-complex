@@ -1,10 +1,4 @@
-type PieSliceProps = {
-  d: string
-  textTransform: string
-  label: string
-  value: number | string
-  color: string
-}
+import { PieSliceProps } from '../types/pie'
 
 export default function PieSlice({
   d,

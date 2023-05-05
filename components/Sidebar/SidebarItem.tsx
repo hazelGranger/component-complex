@@ -2,6 +2,7 @@ import React, { ReactNode, useState } from 'react'
 import SidebarIcon from './SidebarIcon'
 import SidebarText from './SidebarText'
 import styles from './Sidebar.module.css'
+import Link from 'next/link'
 
 type SidebarItemProps = {
   children?: ReactNode
@@ -28,17 +29,17 @@ const SidebarItem = ({
     <li className={styles.sidebarItem}>
       {isCollapsible ? (
         <>
-          <a onClick={handleClick} >
-          { icon && <SidebarIcon icon={icon} />}
+          <a onClick={handleClick}>
+            {icon && <SidebarIcon icon={icon} />}
             <SidebarText text={text} />
           </a>
           {!isCollapsed && children}
         </>
       ) : (
-        <a href={link}>
-           { icon && <SidebarIcon icon={icon} />}
+        <Link href={link ?? ''}>
+          {icon && <SidebarIcon icon={icon} />}
           <SidebarText text={text} />
-        </a>
+        </Link>
       )}
     </li>
   )
