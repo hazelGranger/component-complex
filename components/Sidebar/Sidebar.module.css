@@ -27,7 +27,7 @@
 }
 
 .sidebarItem:hover {
-    background-color: rgb(59 130 246 / 70%);
+    background-color: rgba(0,0,0,.25)
 }
 
 .sidebarItem a {
@@ -35,6 +35,7 @@
     align-items: center;
     padding: 15px 30px;
     flex-wrap: wrap;
+    font-size: 1.5rem;
 }
 
 .sidebarText {

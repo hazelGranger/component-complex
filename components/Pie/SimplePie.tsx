@@ -37,7 +37,7 @@ export default function SimplePieChart({
     <PieContainer
       viewBox={'-320 -320 640 640'}
       style={{
-        maxWidth: width,
+        width: width,
       }}
       textAnchor="middle"
       fontFamily="sans-serif"
