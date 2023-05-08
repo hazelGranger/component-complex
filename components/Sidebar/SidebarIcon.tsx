@@ -1,9 +1,9 @@
 type SidebarIconProps = {
-  icon: string
-}
+  icon: string;
+};
 
 const SidebarIcon = ({ icon }: SidebarIconProps) => {
-  return <span className="material-symbols-outlined">{icon}</span>
-}
+  return <span className="material-symbols-outlined">{icon}</span>;
+};
 
-export default SidebarIcon
+export default SidebarIcon;

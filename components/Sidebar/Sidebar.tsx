@@ -1,6 +1,6 @@
-import styles from './Sidebar.module.css'
-import SidebarItem from './SidebarItem'
-import SidebarList from './SidebarList'
+import styles from './Sidebar.module.css';
+import SidebarItem from './SidebarItem';
+import SidebarList from './SidebarList';
 
 const Sidebar = () => {
   return (
@@ -29,7 +29,7 @@ const Sidebar = () => {
         </SidebarList>
       </nav>
     </aside>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

@@ -1,4 +1,4 @@
-import Pie from '../../../../components/Pie/SimplePie'
+import Pie from '../../../../components/Pie/SimplePie';
 
 const FortuneWheelPage = () => {
   const data = [
@@ -6,7 +6,7 @@ const FortuneWheelPage = () => {
     { label: 'B', value: 2 },
     { label: 'C', value: 1 },
     { label: 'D', value: 2 },
-  ]
+  ];
   return (
     <Pie
       pieData={data}
@@ -18,7 +18,7 @@ const FortuneWheelPage = () => {
       padRadius={300}
       cornerRadius={0}
     />
-  )
-}
+  );
+};
 
-export default FortuneWheelPage
+export default FortuneWheelPage;

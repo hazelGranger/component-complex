@@ -1,16 +1,16 @@
-import React, { ReactNode, useState } from 'react'
-import SidebarIcon from './SidebarIcon'
-import SidebarText from './SidebarText'
-import styles from './Sidebar.module.css'
-import Link from 'next/link'
+import React, { ReactNode, useState } from 'react';
+import SidebarIcon from './SidebarIcon';
+import SidebarText from './SidebarText';
+import styles from './Sidebar.module.css';
+import Link from 'next/link';
 
 type SidebarItemProps = {
-  children?: ReactNode
-  icon?: string
-  text: string
-  isCollapsible?: boolean
-  link?: string
-}
+  children?: ReactNode;
+  icon?: string;
+  text: string;
+  isCollapsible?: boolean;
+  link?: string;
+};
 
 const SidebarItem = ({
   children,
@@ -19,11 +19,11 @@ const SidebarItem = ({
   isCollapsible = false,
   link,
 }: SidebarItemProps) => {
-  const [isCollapsed, setIsCollapsed] = useState(true)
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const handleClick = () => {
-    setIsCollapsed((isCollapsed) => !isCollapsed)
-  }
+    setIsCollapsed((isCollapsed) => !isCollapsed);
+  };
 
   return (
     <li className={styles.sidebarItem}>
@@ -42,7 +42,7 @@ const SidebarItem = ({
         </Link>
       )}
     </li>
-  )
-}
+  );
+};
 
-export default SidebarItem
+export default SidebarItem;

@@ -1,4 +1,4 @@
-import { PieContainerProps } from '../types/pie'
+import { PieContainerProps } from '../types/pie';
 
 export default function PieContainer({
   viewBox,
@@ -16,5 +16,5 @@ export default function PieContainer({
     >
       {children}
     </svg>
-  )
+  );
 }

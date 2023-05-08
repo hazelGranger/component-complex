@@ -1,8 +1,8 @@
-import { pie, arc, PieArcDatum } from 'd3'
-import PieContainer from './PieContainer'
-import PieSlice from './PieSlice'
-import { useMemo } from 'react'
-import { PieChartProps, PieDataItem } from '../types/pie'
+import { pie, arc, PieArcDatum } from 'd3';
+import PieContainer from './PieContainer';
+import PieSlice from './PieSlice';
+import { useMemo } from 'react';
+import { PieChartProps, PieDataItem } from '../types/pie';
 
 export default function SimplePieChart({
   pieData,
@@ -17,8 +17,8 @@ export default function SimplePieChart({
   const pieArcData = useMemo(
     () =>
       pie<PieDataItem>().value((d: PieDataItem) => d[valueAttribute])(pieData),
-    [pieData, valueAttribute],
-  )
+    [pieData, valueAttribute]
+  );
 
   const arcPie = useMemo(
     () =>
@@ -28,10 +28,10 @@ export default function SimplePieChart({
         .padRadius(padRadius)
         .padAngle(2 / padRadius)
         .cornerRadius(cornerRadius),
-    [innerRadius, outerRadius, padRadius, cornerRadius],
-  )
+    [innerRadius, outerRadius, padRadius, cornerRadius]
+  );
 
-  const colors = ['#63cfb2', '#b5d373', '#f6c451', '#e1533d', '#a477bb']
+  const colors = ['#63cfb2', '#b5d373', '#f6c451', '#e1533d', '#a477bb'];
 
   return (
     <PieContainer
@@ -55,5 +55,5 @@ export default function SimplePieChart({
         />
       ))}
     </PieContainer>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { PieSliceProps } from '../types/pie'
+import { PieSliceProps } from '../types/pie';
 
 export default function PieSlice({
   d,
@@ -19,5 +19,5 @@ export default function PieSlice({
         </tspan>
       </text>
     </g>
-  )
+  );
 }

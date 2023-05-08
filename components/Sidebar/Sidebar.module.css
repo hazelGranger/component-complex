@@ -1,43 +1,42 @@
-
 .sidebarList {
-    list-style: none;
-    padding-inline-start: 0;
+  list-style: none;
+  padding-inline-start: 0;
 }
 
-.sidebarList-level-0{
-    min-height: 100vh; 
-    background-color: rgb(59 130 246 / 50%);
+.sidebarList-level-0 {
+  min-height: 100vh;
+  background-color: rgb(59 130 246 / 50%);
 }
 
-.sidebarList-level-1 .sidebarItem span:first-child{
-    text-indent: 1rem;
+.sidebarList-level-1 .sidebarItem span:first-child {
+  text-indent: 1rem;
 }
 
-.sidebarList-level-2 .sidebarItem span:first-child{
-    text-indent: 2rem;
+.sidebarList-level-2 .sidebarItem span:first-child {
+  text-indent: 2rem;
 }
 
-.sidebarList-level-3 .sidebarItem span:first-child{
-    text-indent: 3rem;
+.sidebarList-level-3 .sidebarItem span:first-child {
+  text-indent: 3rem;
 }
 
 .sidebarItem {
-    cursor: pointer;
-    transition: background-color ease-in-out .3s;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.3s;
 }
 
 .sidebarItem:hover {
-    background-color: rgba(0,0,0,.25)
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .sidebarItem a {
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    flex-wrap: wrap;
-    font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
 }
 
 .sidebarText {
-    margin-left: .5rem;
+  margin-left: 0.5rem;
 }
