@@ -1,23 +1,33 @@
-import Pie from '../../../../components/Pie/SimplePie';
+import Figure from '../../../../components/Figure/Figure';
+import FortuneWheel from '../../../../components/Pie/FortuneWheel';
 
 const FortuneWheelPage = () => {
   const data = [
-    { label: 'A', value: 3 },
-    { label: 'B', value: 2 },
+    { label: 'A', value: 1 },
+    { label: 'B', value: 1 },
     { label: 'C', value: 1 },
-    { label: 'D', value: 2 },
+    { label: 'D', value: 1 },
+    { label: 'E', value: 1 },
+    { label: 'F', value: 1 },
+    { label: 'G', value: 1 },
+    { label: 'H', value: 1 },
+    { label: 'I', value: 1 },
+    { label: 'J', value: 1 },
   ];
   return (
-    <Pie
-      pieData={data}
-      valueAttribute={'value'}
-      textAttribute={'label'}
-      width={'700px'}
-      innerRadius={0}
-      outerRadius={300}
-      padRadius={300}
-      cornerRadius={0}
-    />
+    <Figure caption="Fortune wheel" maxWidth="60rem">
+      <FortuneWheel
+        pieData={data}
+        valueAttribute={'value'}
+        textAttribute={'label'}
+        width={'800px'}
+        innerRadius={100}
+        outerRadius={300}
+        padRadius={0}
+        cornerRadius={0}
+        spinMaximumTimeInSeconds={4}
+      />
+    </Figure>
   );
 };
 

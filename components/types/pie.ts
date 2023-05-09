@@ -15,6 +15,10 @@ export type PieChartProps = {
   padRadius: number;
 };
 
+export type FortuneWheelProps = PieChartProps & {
+  spinMaximumTimeInSeconds: number;
+};
+
 export type PieContainerProps = {
   viewBox: string;
   style?: CSSProperties;
@@ -27,6 +31,12 @@ export type PieSliceProps = {
   d: string;
   textTransform: string;
   label: string;
-  value: number | string;
+  value?: number | string;
   color: string;
+};
+
+export type FortuneWheelButtonProps = {
+  handleSpin: () => void;
+  radius: number;
+  text: string;
 };

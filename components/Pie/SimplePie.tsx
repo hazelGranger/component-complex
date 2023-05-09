@@ -3,6 +3,7 @@ import PieContainer from './PieContainer';
 import PieSlice from './PieSlice';
 import { useMemo } from 'react';
 import { PieChartProps, PieDataItem } from '../types/pie';
+import { chart_colors as colors } from '../../constants/colors';
 
 export default function SimplePieChart({
   pieData,
@@ -30,8 +31,6 @@ export default function SimplePieChart({
         .cornerRadius(cornerRadius),
     [innerRadius, outerRadius, padRadius, cornerRadius]
   );
-
-  const colors = ['#63cfb2', '#b5d373', '#f6c451', '#e1533d', '#a477bb'];
 
   return (
     <PieContainer

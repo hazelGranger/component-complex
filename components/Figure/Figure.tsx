@@ -13,7 +13,7 @@ const Figure: React.FC<FigureProps> = ({
   width,
 }: FigureProps) => {
   return (
-    <figure style={{ maxWidth, width }}>
+    <figure style={{ maxWidth, width }} className={styles.figure}>
       {children}
       <figcaption className={styles.figureCaption}>{caption}</figcaption>
     </figure>
