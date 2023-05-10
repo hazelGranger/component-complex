@@ -1,5 +1,5 @@
 import { theme_colors } from '../../constants/colors';
-import { FortuneWheelButtonProps } from '../types/pie';
+import { FortuneWheelButtonProps } from '../../types/pie';
 import styles from './FortuneWheel.module.css';
 
 export const FortuneWheelButton = ({

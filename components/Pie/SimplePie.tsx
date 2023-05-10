@@ -2,7 +2,7 @@ import { pie, arc, PieArcDatum } from 'd3';
 import PieContainer from './PieContainer';
 import PieSlice from './PieSlice';
 import { useMemo } from 'react';
-import { PieChartProps, PieDataItem } from '../types/pie';
+import { PieChartProps, PieDataItem } from '../../types/pie';
 import { chart_colors as colors } from '../../constants/colors';
 
 export default function SimplePieChart({

@@ -2,7 +2,7 @@ import { pie, arc, PieArcDatum, pointer, color } from 'd3';
 import PieContainer from './PieContainer';
 import PieSlice from './PieSlice';
 import { useMemo, useState } from 'react';
-import { FortuneWheelProps, PieDataItem } from '../types/pie';
+import { FortuneWheelProps, PieDataItem } from '../../types/pie';
 import { chart_colors as colors } from '../../constants/colors';
 import { FortuneWheelButton } from './FortuneWheelButton';
 import styles from './FortuneWheel.module.css';
