@@ -8,7 +8,11 @@ const Sidebar = () => {
       <nav className={styles.sidebar}>
         <SidebarList level={0}>
           <SidebarItem link="/" icon="home" text="Home" />
-          <SidebarItem icon="" text="Form Elements" isCollapsible={true}>
+          <SidebarItem
+            icon="dynamic_form"
+            text="Form Elements"
+            isCollapsible={true}
+          >
             <SidebarList level={1}>
               <SidebarItem
                 link="/form-elements/auto-height-textarea"
