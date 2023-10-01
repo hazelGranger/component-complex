@@ -3,10 +3,11 @@ import SidebarIcon from './SidebarIcon';
 import SidebarText from './SidebarText';
 import styles from './Sidebar.module.css';
 import Link from 'next/link';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 type SidebarItemProps = {
   children?: ReactNode;
-  icon?: string;
+  icon?: IconProp;
   text: string;
   isCollapsible?: boolean;
   link?: string;
