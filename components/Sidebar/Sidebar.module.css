@@ -12,6 +12,10 @@
   text-indent: 1rem;
 }
 
+.sidebarList-level-1 .sidebarItem a:first-child {
+  margin-left: 1rem;
+}
+
 .sidebarList-level-2 .sidebarItem span:first-child {
   text-indent: 2rem;
 }
@@ -26,7 +30,7 @@
 }
 
 .sidebarItem:hover {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .sidebarItem a {
